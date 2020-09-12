@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <TextView
+        android:id="@+id/feed_itinerary_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Initerary title"
+        android:textSize="25sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/feed_itinerary_string" />
+
+    <Button
+        android:id="@+id/feed_itinerary_string"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/save_selector"
+        android:drawableStart="@drawable/feed_string"
+        android:text="String"
+        android:textColor="#933DEC"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:drawablePadding="10dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/feed_itinerary_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/no_image"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/feed_itinerary_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintDimensionRatio="1:1" />
+
+    <ImageView
+        android:id="@+id/feed_itinerary_user_avatar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/no_image"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/feed_itinerary_image"
+        app:layout_constraintStart_toStartOf="@+id/feed_itinerary_image"/>
+
+    <TextView
+        android:id="@+id/feed_itinerary_username"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:textSize="15sp"
+        android:textColor="#04040F"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintTop_toTopOf="@+id/feed_itinerary_user_avatar"
+        app:layout_constraintStart_toEndOf="@+id/feed_itinerary_user_avatar"
+        app:layout_constraintEnd_toEndOf="@+id/feed_itinerary_image"/>
+
+    <TextView
+        android:id="@+id/feed_itinerary_strungFrom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="strungFrom"
+        android:textSize="15sp"
+        android:textColor="#9597A2"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintTop_toBottomOf="@+id/feed_itinerary_username"
+        app:layout_constraintStart_toEndOf="@+id/feed_itinerary_user_avatar"
+        app:layout_constraintEnd_toEndOf="@+id/feed_itinerary_image"/>
+
+    <TextView
+        android:id="@+id/feed_itinerary_user_bio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="User bio"
+        android:textSize="15sp"
+        android:textColor="#04040F"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/feed_itinerary_strungFrom"
+        app:layout_constraintStart_toStartOf="@+id/feed_itinerary_user_avatar"
+        app:layout_constraintEnd_toEndOf="@+id/feed_itinerary_image"/>
+
+    <ImageView
+        android:id="@+id/feed_itinerary_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/feed_favorite"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@id/feed_itinerary_user_avatar"
+        app:layout_constraintTop_toBottomOf="@id/feed_itinerary_user_bio" />
+
+    <TextView
+        android:id="@+id/feed_itinerary_favorite_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="favorite count"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toEndOf="@+id/feed_itinerary_favorite"
+        app:layout_constraintTop_toTopOf="@id/feed_itinerary_favorite"/>
+
+    <ImageView
+        android:id="@+id/feed_itinerary_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/feed_comment"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@+id/feed_itinerary_favorite_count"
+        app:layout_constraintTop_toTopOf="@id/feed_itinerary_favorite_count"/>
+
+    <TextView
+        android:id="@+id/feed_itinerary_comment_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comment count"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toEndOf="@+id/feed_itinerary_comment"
+        app:layout_constraintTop_toTopOf="@id/feed_itinerary_comment"/>
+
+    <ImageView
+        android:id="@+id/feed_itinerary_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/feed_option"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/feed_itinerary_comment_count"/>
+
+    <TextView
+        android:id="@+id/feed_itinerary_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#808080"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/feed_itinerary_option" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

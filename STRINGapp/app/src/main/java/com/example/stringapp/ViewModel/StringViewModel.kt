@@ -32,7 +32,6 @@ class StringViewModel(private val myRepository: Repository): ViewModel() {
 
     private val requestMobileFeed = MutableLiveData<Result<MobileFeed>>()
     var feedPage = MutableLiveData<Int>()
-    var isLoading = MutableLiveData<Boolean>()
 
     private val requestFeedLike = MutableLiveData<Result<LikeAndSave>>()
     private val requestFeedSave = MutableLiveData<Result<LikeAndSave>>()

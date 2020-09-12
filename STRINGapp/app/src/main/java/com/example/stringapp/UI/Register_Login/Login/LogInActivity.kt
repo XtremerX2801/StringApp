@@ -73,11 +73,8 @@ class LogInActivity: AppCompatActivity(), View.OnClickListener {
     }
 
     private fun allFilled(): Boolean{
-        if ((login_email_emailname_edittext == null)
-            || (login_email_password_edittext == null)){
-            return false
-        }
-        return true
+        return !((login_email_emailname_edittext.text.isNullOrBlank())
+                || (login_email_password_edittext.text.isNullOrBlank()))
     }
 
     private fun viewModel() : StringViewModel {

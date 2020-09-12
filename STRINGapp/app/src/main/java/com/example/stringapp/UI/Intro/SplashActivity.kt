@@ -28,15 +28,15 @@ class SplashActivity: AppCompatActivity() {
                 } catch (e: Exception) {
                     e.printStackTrace()
                 } finally {
-                    val sharedPreferences: SharedPreferences = getSharedPreferences(sharedPref, MODE_PRIVATE)
-                    sharedPreferences.getString(accessToken, "")?.let { Log.d("token", it) }
-                    if (sharedPreferences.getString(accessToken, "") != "null"){
-                        val mainIntent = Intent(this@SplashActivity, LogInActivity::class.java)
-                        startActivity(mainIntent)
-                    } else {
+//                    val sharedPreferences: SharedPreferences = getSharedPreferences(sharedPref, MODE_PRIVATE)
+//                    sharedPreferences.getString(accessToken, "")?.let { Log.d("token", it) }
+//                    if (sharedPreferences.getString(accessToken, "") != "null"){
+//                        val mainIntent = Intent(this@SplashActivity, LogInActivity::class.java)
+//                        startActivity(mainIntent)
+//                    } else {
                         val mainIntent = Intent(this@SplashActivity, ViewPagerManager::class.java)
                         startActivity(mainIntent)
-                    }
+//                    }
                 }
             }
         }
